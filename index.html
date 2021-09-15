@@ -11,25 +11,42 @@
 
 <body>
     <div id="app">
-        <p>{{message}}</p>
+        <p v-text="message"></p>
+        <br>
         <span v-bind:title="message2">
             Welcome to the vue world
         </span>
+        <br>
         <span v-if="seen">Now you see me</span>
+        <br>
         <ol>
             <li v-for="todo in todos">
                 {{ todo.text }}
             </li>
         </ol>
+        <br>
         <div>
             <p>{{ message3 }}</p>
             <button v-on:click="reverseMessage">Reverse Message</button>
         </div>
+        <br>
         <div>
             <p>{{ message4 }}</p>
             <input v-model="message4">
         </div>
+        <br>
+        <div>
+            <p v-if="jahedAge >= tanvirAge">
+                Jahed is older than tanvir
+            </p>
+            <p v-else>
+                Tanvir is older than tanvir
+            </p>
+        </div>
+
     </div>
+    </div>
+
 
     <script src="app.js"></script>
 </body>
